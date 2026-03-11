@@ -1,0 +1,15 @@
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\bin\Debug\net9.0\IntroClasses.exe
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\bin\Debug\net9.0\IntroClasses.deps.json
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\bin\Debug\net9.0\IntroClasses.runtimeconfig.json
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\bin\Debug\net9.0\IntroClasses.dll
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\bin\Debug\net9.0\IntroClasses.pdb
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.AssemblyInfoInputs.cache
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.AssemblyInfo.cs
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.csproj.CoreCompileInputs.cache
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.sourcelink.json
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.dll
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\refint\IntroClasses.dll
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.pdb
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.genruntimeconfig.cache
+C:\Users\Komputer\RiderProjects\IntroClasses\IntroClasses\obj\Debug\net9.0\ref\IntroClasses.dll
