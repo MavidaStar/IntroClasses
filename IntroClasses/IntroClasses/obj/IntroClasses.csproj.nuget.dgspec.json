@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Komputer\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses.csproj": {}
+    "C:\\Users\\mmamczur\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses\\IntroClasses.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Komputer\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses.csproj": {
+    "C:\\Users\\mmamczur\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses\\IntroClasses.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Komputer\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses.csproj",
+        "projectUniqueName": "C:\\Users\\mmamczur\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses\\IntroClasses.csproj",
         "projectName": "IntroClasses",
-        "projectPath": "C:\\Users\\Komputer\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses.csproj",
-        "packagesPath": "C:\\Users\\Komputer\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Komputer\\RiderProjects\\IntroClasses\\IntroClasses\\obj\\",
+        "projectPath": "C:\\Users\\mmamczur\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses\\IntroClasses.csproj",
+        "packagesPath": "C:\\Users\\mmamczur\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\mmamczur\\RiderProjects\\IntroClasses\\IntroClasses\\IntroClasses\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Komputer\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\mmamczur\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
@@ -59,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.306/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\mmamczur\\.dotnet\\sdk\\9.0.312/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

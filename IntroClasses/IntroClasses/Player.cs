@@ -21,8 +21,23 @@ public class Player
 
     public void Move(int diffX, int diffY)
     {
-        _x += diffX;
-        _y += diffY;
+        //4.1 dodanie int targetX = _x + diffX; oraz if (targetX >= 0)
+        //4.2 dodanie int targetY = _y + diffY; oraz if (targetY >= 0)
+        int targetX = _x + diffX;
+        int targetY = _y + diffY;
+        
+        if (targetX >= 0 && targetX < Console.BufferWidth)
+        {
+            _x += targetX;
+        }
+
+        if (targetX >= 0 && targetY < Console.BufferWidth)
+        {
+            _y += targetY;
+        }
+        
+        //4.1 _x += diffX; -> zmiana na _x += targetX; wpisane w if (targetX >= 0 && targetX < Console.BufferWidth)
+        //4.2 _y += diffY; -> zmiana na _y += targetY; wpisane w  if (targetX >= 0 && targetY < Console.BufferWidth)
     }
 
     //public void TakeTurn() - oryginalnie, zmieniamy void na bool
