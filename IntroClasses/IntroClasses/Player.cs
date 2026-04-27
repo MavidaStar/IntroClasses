@@ -4,16 +4,25 @@ public class Player
 {
     //2. Rename private in na nazwy z podłogą; ctrl + . albo F2
     //1. private int x;
-    private int _x;
+    //4.3 private int _x;
     //1. private int y;
-    private int _y;
+    //4.3 private int _y;
     //1. private string avatar = "@";
+    //4.5 do tej zmiennej = przypisz nowy obiekt
+    private Vector2 _position = new Vector2(0, 0);
     private string _avatar = "@";
+    
+    //4.6 Konstruktor
+    public Player(Vector2 startingPosition)
+    {
+        
+    }
 
     public void Display()
     {
         //2. Dodanie Console.SetCursorPosition i Console.Write - x to kolumna, a y to wiersz (na odwrót jest)
-        Console.SetCursorPosition(_x, _y);
+        //4.4 Console.SetCursorPosition(_x, _y);
+        Console.SetCursorPosition(_position.X, _position.Y);
         //1. Console.WriteLine(_avatar);
         //1. Console.WriteLine($"Position: {_x}, {_y}");
         Console.Write(_avatar);
@@ -21,19 +30,24 @@ public class Player
 
     public void Move(int diffX, int diffY)
     {
+        //4. Limitiowane ruchu gracza out of bands
         //4.1 dodanie int targetX = _x + diffX; oraz if (targetX >= 0)
         //4.2 dodanie int targetY = _y + diffY; oraz if (targetY >= 0)
-        int targetX = _x + diffX;
-        int targetY = _y + diffY;
+        //4.4 int targetX = _x + diffX;
+        //4.4 int targetY = _y + diffY;
+        int targetX = _position.X + diffX;
+        int targetY = _position.Y + diffY;
         
         if (targetX >= 0 && targetX < Console.BufferWidth)
         {
-            _x += targetX;
+            //4.4 _x += targetX;
+            _position.X += targetX;
         }
 
         if (targetX >= 0 && targetY < Console.BufferWidth)
         {
-            _y += targetY;
+            //4.4 _y += targetY;
+            _position.Y += targetY;
         }
         
         //4.1 _x += diffX; -> zmiana na _x += targetX; wpisane w if (targetX >= 0 && targetX < Console.BufferWidth)
@@ -52,7 +66,8 @@ public class Player
         ConsoleKeyInfo input = Console.ReadKey(true);
         //3. Dodanie pojawienia się spacji po RedKey i usunięcie Console.Clear - pojawianie się wcześniejszego miejsca avatara
         //3.1 Dodanie Console.SetCursorPosition(_x, _y)
-        Console.SetCursorPosition(_x, _y);
+        //4.4 Console.SetCursorPosition(_x, _y) -> zamienione;
+        Console.SetCursorPosition(_position.X, _position.Y);
         Console.Write(" ");
         //1. switch (input)
         switch (input.Key)
