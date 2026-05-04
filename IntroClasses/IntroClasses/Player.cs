@@ -1,6 +1,6 @@
 namespace IntroClasses;
 
-public class Player
+public class Player : Character
 {
     //2. Rename private in na nazwy z podłogą; ctrl + . albo F2
     //1. private int x;
@@ -9,53 +9,16 @@ public class Player
     //4.3 private int _y;
     //1. private string avatar = "@";
     //4.5 do tej zmiennej = przypisz nowy obiekt
-    private Vector2 _position = new Vector2(0, 0);
-    private string _avatar = "@";
+    //5. private Vector2 _position = new Vector2(0, 0);
+    //5. private string _avatar = "@";
     
     //4.6 Konstruktor
-    public Player(Vector2 startingPosition)
+    public Player(Vector2 startingPosition) : base(startingPosition)
     {
-        
-    }
-
-    public void Display()
-    {
-        //2. Dodanie Console.SetCursorPosition i Console.Write - x to kolumna, a y to wiersz (na odwrót jest)
-        //4.4 Console.SetCursorPosition(_x, _y);
-        Console.SetCursorPosition(_position.X, _position.Y);
-        //1. Console.WriteLine(_avatar);
-        //1. Console.WriteLine($"Position: {_x}, {_y}");
-        Console.Write(_avatar);
-    }
-
-    public void Move(int diffX, int diffY)
-    {
-        //4. Limitiowane ruchu gracza out of bands
-        //4.1 dodanie int targetX = _x + diffX; oraz if (targetX >= 0)
-        //4.2 dodanie int targetY = _y + diffY; oraz if (targetY >= 0)
-        //4.4 int targetX = _x + diffX;
-        //4.4 int targetY = _y + diffY;
-        int targetX = _position.X + diffX;
-        int targetY = _position.Y + diffY;
-        
-        if (targetX >= 0 && targetX < Console.BufferWidth)
-        {
-            //4.4 _x += targetX;
-            _position.X += targetX;
-        }
-
-        if (targetX >= 0 && targetY < Console.BufferWidth)
-        {
-            //4.4 _y += targetY;
-            _position.Y += targetY;
-        }
-        
-        //4.1 _x += diffX; -> zmiana na _x += targetX; wpisane w if (targetX >= 0 && targetX < Console.BufferWidth)
-        //4.2 _y += diffY; -> zmiana na _y += targetY; wpisane w  if (targetX >= 0 && targetY < Console.BufferWidth)
     }
 
     //public void TakeTurn() - oryginalnie, zmieniamy void na bool
-    public bool TakeTurn()
+    public override bool TakeTurn()
     {
         //3.1 stwiorzenie funkcji bool isPlaying = true;
         bool isPlaying = true;
