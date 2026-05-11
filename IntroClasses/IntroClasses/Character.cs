@@ -16,6 +16,11 @@ namespace IntroClasses;
             Console.Write(_avatar);
         }
 
+        public void Move(Vector2 direction)
+        {
+            Move(direction.X, direction.Y);
+        }
+        
         public void Move(int diffX, int diffY)
         {
             int targetX = _position.X + diffX;
@@ -26,7 +31,7 @@ namespace IntroClasses;
                 _position.X = targetX;
             }
 
-            if (targetX >= 0 && targetY < Console.BufferWidth)
+            if (targetY >= 0 && targetY < Console.BufferHeight)
             {
                 _position.Y = targetY;
             }

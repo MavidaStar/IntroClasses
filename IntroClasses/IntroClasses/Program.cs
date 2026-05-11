@@ -4,10 +4,16 @@ public class Program
 {
     public static void Main()
     {
+        Dictionary<ConsoleKey, Vector2> directions = new Dictionary<ConsoleKey, Vector2>();
+        directions[ConsoleKey.A] = new Vector2(-1, 0);
+        directions[ConsoleKey.D] = new Vector2(1, 0);
+        directions[ConsoleKey.W] = new Vector2(0, -1);
+        directions[ConsoleKey.S] = new Vector2(0, 1);
+            
         //2. Dodanie funkcji do zamykania pętli, jej nazwa odpowiada przy ConsoleKey.Q na końcu pętli, żeby ją zamknąć
         bool isPlaying = true;
         Vector2 startingPosition = new Vector2(4, 2);
-        Character hero = new Player(startingPosition);
+        Character hero = new Player(startingPosition, directions);
         //4.7 "zakomentowanie chwilowe" startingPosition = new Vector2(0, 0);
         startingPosition.X = 0;
         startingPosition.Y = 0;

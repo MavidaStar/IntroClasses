@@ -2,6 +2,7 @@ namespace IntroClasses;
 
 public class Player : Character
 {
+    private readonly Dictionary<ConsoleKey, Vector2> _inputMap;
     //2. Rename private in na nazwy z podłogą; ctrl + . albo F2
     //1. private int x;
     //4.3 private int _x;
@@ -13,8 +14,9 @@ public class Player : Character
     //5. private string _avatar = "@";
     
     //4.6 Konstruktor
-    public Player(Vector2 startingPosition) : base(startingPosition)
+    public Player(Vector2 startingPosition, Dictionary<ConsoleKey, Vector2> inputMap) : base(startingPosition)
     {
+        _inputMap = inputMap;
     }
 
     //public void TakeTurn() - oryginalnie, zmieniamy void na bool
@@ -32,30 +34,22 @@ public class Player : Character
         //4.4 Console.SetCursorPosition(_x, _y) -> zamienione;
         Console.SetCursorPosition(_position.X, _position.Y);
         Console.Write(" ");
-        //1. switch (input)
-        switch (input.Key)
+
+        if (_inputMap.ContainsKey(input.Key))
         {
-            //1. case "s":
-            case ConsoleKey.S:
-                Move(0, 1);
-                break;
-            //1. case "w":
-            case ConsoleKey.W:
-                Move(0, -1);
-                break;
-            //1. case "a":
-            case ConsoleKey.A:
-                Move(-1, 0);
-                break;
-            //2. case "d":
-            case ConsoleKey.D:
-                Move(1, 0);
-                break;
-            //2. Dodanie ConsoleKey.Q: - zamykanie pętli
-            case ConsoleKey.Q:
-                isPlaying = false;
-                break;
+            Vector2 direction = _inputMap[input.Key];
+            Move(direction);
         }
+        else
+        {
+            switch (input.Key)
+            {
+                case ConsoleKey.Q:
+                    isPlaying = false;
+                    break;
+            }
+        }
+
         //3. Dodano Console.Clear(); - żeby wyczyścić poprzedni ruch avatara przed stworzeniem nowego;
         //bez tego jak się ruszaliśmy avatarem został on po sobie ślad, dzięki temu już go nie zostawia i faktycznie widać, że rusza się jak normalny gracz
         //Console.Clear(); 
