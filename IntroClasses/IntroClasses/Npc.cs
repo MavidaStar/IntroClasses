@@ -1,11 +1,8 @@
-using System.Security.Cryptography;
-
 namespace IntroClasses;
 
 public class Npc : Character
 {
-    private List<Vector2> availableDirections =
-    [
+    List<Vector2> availableDirections = [
         new Vector2(-1, 0), // w lewo
         new Vector2(1, 0), // w prawo
         new Vector2(0, -1), // w górę
@@ -16,13 +13,14 @@ public class Npc : Character
         
     }
 
-    public override bool TakeTurn()
+    public override bool TakeTurn(Map map)
     {
         Console.SetCursorPosition(_position.X, _position.Y);
-        Console.Write(" ");
-        int index = Random.Shared.Next(0, availableDirections.Count);
+        Console.Write(map.GetCell(_position.X, _position.Y).Visuals);
+
+        int index = Random.Shared.Next(availableDirections.Count);
         Vector2 direction = availableDirections[index];
-        Move(direction);
+        Move(direction, map);
         Display();
         return true;
     }

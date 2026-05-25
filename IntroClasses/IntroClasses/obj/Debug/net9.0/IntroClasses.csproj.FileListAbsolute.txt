@@ -28,3 +28,4 @@ C:\Users\mmamczur\RiderProjects\IntroClasses\IntroClasses\IntroClasses\obj\Debug
 C:\Users\mmamczur\RiderProjects\IntroClasses\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.pdb
 C:\Users\mmamczur\RiderProjects\IntroClasses\IntroClasses\IntroClasses\obj\Debug\net9.0\IntroClasses.genruntimeconfig.cache
 C:\Users\mmamczur\RiderProjects\IntroClasses\IntroClasses\IntroClasses\obj\Debug\net9.0\ref\IntroClasses.dll
+C:\Users\mmamczur\RiderProjects\IntroClasses\IntroClasses\IntroClasses\bin\Debug\net9.0\level1.txt
