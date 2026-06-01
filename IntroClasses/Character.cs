@@ -3,11 +3,14 @@ namespace IntroClasses;
 public abstract class Character
 {
     protected Vector2 _position = new Vector2(0, 0);
-    private string _avatar = "@";
+    private char _avatar = '@';
 
-    public Character(Vector2 startingPosition)
+    public Character(char avatar, Vector2 startingPosition, Map map)
     {
+        _avatar = avatar;
         _position = startingPosition;
+        Cell cell = map.GetCell(_position.X, _position.Y);
+        cell.Occupant = this;
     }
 
     public void Display()
@@ -16,12 +19,12 @@ public abstract class Character
         Console.Write(_avatar);
     }
 
-    public void Move(Vector2 direction, Map map)
+    public bool Move(Vector2 direction, Map map)
     {
-        Move(direction.X, direction.Y, map);
+        return Move(direction.X, direction.Y, map);
     }
 
-    public void Move(int diffX, int diffY, Map map)
+    public bool Move(int diffX, int diffY, Map map)
     {
         int targetX = _position.X + diffX;
         int targetY = _position.Y + diffY;
@@ -35,9 +38,12 @@ public abstract class Character
                     _position.Y = targetY;
                     _position.X = targetX;
                     cell.Occupant = this;
+                    return true;
                 }
             }
         }
+
+        return false;
     }
 
     public abstract bool TakeTurn(Map map);

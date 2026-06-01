@@ -8,7 +8,7 @@ public class Npc : Character
         new Vector2(0, -1), // w górę
         new Vector2(0, 1) // w dół
     ];
-    public Npc(Vector2 startingPosition) : base(startingPosition)
+    public Npc(char avatar, Vector2 startingPosition, Map map) : base(avatar, startingPosition, map)
     {
         
     }
@@ -16,11 +16,15 @@ public class Npc : Character
     public override bool TakeTurn(Map map)
     {
         Console.SetCursorPosition(_position.X, _position.Y);
-        Console.Write(map.GetCell(_position.X, _position.Y).Visuals);
+        Cell cell = map.GetCell(_position.X, _position.Y);
 
         int index = Random.Shared.Next(availableDirections.Count);
-        Vector2 direction = availableDirections[index];
-        Move(direction, map);
+        Vector2 direction = availableDirections[index]; 
+        if (Move(direction, map))
+        {
+            Console.Write(cell.Visuals);
+            cell.Occupant = null;
+        }
         Display();
         return true;
     }
